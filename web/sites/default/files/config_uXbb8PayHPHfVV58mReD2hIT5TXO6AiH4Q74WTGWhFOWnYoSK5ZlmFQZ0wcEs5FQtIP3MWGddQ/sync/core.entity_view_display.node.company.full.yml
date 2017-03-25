@@ -6,9 +6,9 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.company.body
     - field.field.node.company.field_credentials
-    - field.field.node.company.field_dot_insurance
-    - field.field.node.company.field_dot_snapshot
+    - field.field.node.company.field_dot_number
     - field.field.node.company.field_email
+    - field.field.node.company.field_insurance
     - field.field.node.company.field_location
     - field.field.node.company.field_payment
     - field.field.node.company.field_phone
@@ -52,6 +52,8 @@ third_party_settings:
       children:
         - field_dot_snapshot
         - field_dot_insurance
+        - field_dot_number
+        - field_insurance
         - field_credentials
         - field_payment
         - body
@@ -112,43 +114,37 @@ content:
   body:
     label: above
     type: text_default
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
   field_credentials:
-    weight: 4
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
-  field_dot_insurance:
-    weight: 3
+  field_dot_number:
+    type: number_integer
+    weight: 4
     label: inline
     settings:
-      trim_length: 80
-      rel: nofollow
-      target: _blank
-      url_only: false
-      url_plain: false
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: link
-  field_dot_snapshot:
-    weight: 2
-    label: inline
-    settings:
-      trim_length: 80
-      rel: nofollow
-      target: _blank
-      url_only: false
-      url_plain: false
-    third_party_settings: {  }
-    type: link
   field_email:
     weight: 5
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
+  field_insurance:
+    type: number_integer
+    weight: 5
+    label: inline
+    settings:
+      thousand_separator: ','
+      prefix_suffix: true
+    third_party_settings: {  }
   field_location:
     weight: 7
     label: above
@@ -156,7 +152,7 @@ content:
     third_party_settings: {  }
     type: address_default
   field_payment:
-    weight: 5
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }

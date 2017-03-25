@@ -312,13 +312,13 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
+                title: Michigan
+                operator: '='
+                value: MI
+              2:
                 title: 'New York'
                 operator: '='
                 value: NY
-              2:
-                title: ''
-                operator: '='
-                value: ''
               3:
                 title: ''
                 operator: '='
