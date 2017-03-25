@@ -1,0 +1,18 @@
+uuid: 6898bb59-d337-4b6f-a817-dde15a33a373
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_vehicle
+id: vehicle.field_day
+field_name: field_day
+entity_type: vehicle
+type: float
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

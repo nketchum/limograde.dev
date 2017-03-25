@@ -1,0 +1,93 @@
+uuid: b8bd6510-cfb1-4bf9-a117-7632be0f270c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vehicle.vehicle.field_amenities
+    - field.field.vehicle.vehicle.field_day
+    - field.field.vehicle.vehicle.field_hour
+    - field.field.vehicle.vehicle.field_mile
+    - field.field.vehicle.vehicle.field_qty
+    - field.field.vehicle.vehicle.field_seats
+    - field.field.vehicle.vehicle.field_vehicle_type
+    - field.field.vehicle.vehicle.field_year
+  module:
+    - limograde_vehicle
+    - options
+    - range
+id: vehicle.vehicle.default
+targetEntityType: vehicle
+bundle: vehicle
+mode: default
+content:
+  field_amenities:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_day:
+    weight: 4
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_hour:
+    weight: 3
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_mile:
+    weight: 5
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+  field_qty:
+    weight: 1
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_seats:
+    weight: 2
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_vehicle_type:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_year:
+    weight: 7
+    label: inline
+    settings:
+      range_separator: '-'
+      thousand_separator: ''
+      range_combine: true
+      from_prefix_suffix: false
+      to_prefix_suffix: false
+    third_party_settings: {  }
+    type: range_integer
+hidden:
+  user_id: true

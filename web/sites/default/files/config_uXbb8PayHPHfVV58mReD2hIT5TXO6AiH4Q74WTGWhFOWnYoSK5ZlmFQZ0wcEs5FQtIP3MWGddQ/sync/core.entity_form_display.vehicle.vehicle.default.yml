@@ -1,0 +1,68 @@
+uuid: a6ad7135-53ec-4bfd-a813-256331b22b0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.vehicle.vehicle.field_amenities
+    - field.field.vehicle.vehicle.field_day
+    - field.field.vehicle.vehicle.field_hour
+    - field.field.vehicle.vehicle.field_mile
+    - field.field.vehicle.vehicle.field_qty
+    - field.field.vehicle.vehicle.field_seats
+    - field.field.vehicle.vehicle.field_vehicle_type
+    - field.field.vehicle.vehicle.field_year
+  module:
+    - limograde_vehicle
+    - range
+id: vehicle.vehicle.default
+targetEntityType: vehicle
+bundle: vehicle
+mode: default
+content:
+  field_amenities:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_day:
+    weight: 4
+    settings:
+      placeholder: '500.00'
+    third_party_settings: {  }
+    type: number
+  field_hour:
+    weight: 3
+    settings:
+      placeholder: '100.00'
+    third_party_settings: {  }
+    type: number
+  field_mile:
+    weight: 5
+    settings:
+      placeholder: '1.00'
+    third_party_settings: {  }
+    type: number
+  field_qty:
+    weight: 1
+    settings:
+      placeholder: '1'
+    third_party_settings: {  }
+    type: number
+  field_seats:
+    weight: 2
+    settings:
+      placeholder: '10'
+    third_party_settings: {  }
+    type: number
+  field_vehicle_type:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_year:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: range
+hidden:
+  user_id: true

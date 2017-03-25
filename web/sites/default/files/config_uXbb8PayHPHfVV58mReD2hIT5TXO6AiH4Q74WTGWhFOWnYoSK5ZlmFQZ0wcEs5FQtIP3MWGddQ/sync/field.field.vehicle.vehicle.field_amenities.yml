@@ -1,0 +1,21 @@
+uuid: d2be35ca-0c75-4089-82db-770df5ddca9b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vehicle.field_amenities
+  module:
+    - limograde_vehicle
+    - options
+id: vehicle.vehicle.field_amenities
+field_name: field_amenities
+entity_type: vehicle
+bundle: vehicle
+label: Amenities
+description: 'Ctrl + click to multiple select.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

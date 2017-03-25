@@ -1,0 +1,19 @@
+uuid: 033412fa-67b6-46ef-8714-5edb687a9cc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_dot_snapshot
+field_name: field_dot_snapshot
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

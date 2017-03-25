@@ -1,0 +1,21 @@
+uuid: 23e29597-943b-492e-9be9-f99e7719eb50
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vehicle.field_vehicle_type
+  module:
+    - limograde_vehicle
+    - options
+id: vehicle.vehicle.field_vehicle_type
+field_name: field_vehicle_type
+entity_type: vehicle
+bundle: vehicle
+label: Type
+description: 'General category of vehicle.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

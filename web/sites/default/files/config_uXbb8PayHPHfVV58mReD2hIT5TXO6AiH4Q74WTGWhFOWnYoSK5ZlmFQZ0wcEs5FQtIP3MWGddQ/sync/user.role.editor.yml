@@ -1,0 +1,19 @@
+uuid: d08b08b9-9db1-4874-8e42-64a756d206de
+langcode: en
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 3
+is_admin: null
+permissions:
+  4: 'change own username'
+  5: 'access user profiles'
+  7: 'add vehicle entities'
+  8: 'delete vehicle entities'
+  9: 'edit vehicle entities'
+  10: 'view unpublished vehicle entities'
+  11: 'view own unpublished content'
+  12: 'create company content'
+  13: 'delete any company content'
+  14: 'edit any company content'

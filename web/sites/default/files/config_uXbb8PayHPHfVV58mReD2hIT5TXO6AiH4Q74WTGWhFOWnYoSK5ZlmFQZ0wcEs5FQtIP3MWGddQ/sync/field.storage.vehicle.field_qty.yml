@@ -1,0 +1,20 @@
+uuid: f7d94fb4-fd30-4498-b1bc-bed9a00919b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_vehicle
+id: vehicle.field_qty
+field_name: field_qty
+entity_type: vehicle
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

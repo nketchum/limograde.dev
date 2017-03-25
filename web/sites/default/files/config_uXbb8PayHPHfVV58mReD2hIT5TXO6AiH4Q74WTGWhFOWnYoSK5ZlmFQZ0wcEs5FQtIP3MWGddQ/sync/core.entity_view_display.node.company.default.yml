@@ -1,0 +1,130 @@
+uuid: 17a2f14a-68ae-47e4-86f8-effc2160d3e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.company.body
+    - field.field.node.company.field_credentials
+    - field.field.node.company.field_dot_insurance
+    - field.field.node.company.field_dot_snapshot
+    - field.field.node.company.field_email
+    - field.field.node.company.field_location
+    - field.field.node.company.field_payment
+    - field.field.node.company.field_phone
+    - field.field.node.company.field_photo
+    - field.field.node.company.field_photos
+    - field.field.node.company.field_vehicles
+    - field.field.node.company.field_website
+    - image.style.medium
+    - node.type.company
+  module:
+    - address
+    - image
+    - link
+    - options
+    - text
+    - user
+id: node.company.default
+targetEntityType: node
+bundle: company
+mode: default
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_credentials:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_dot_insurance:
+    weight: 6
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+  field_dot_snapshot:
+    weight: 5
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+  field_email:
+    weight: 2
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+  field_location:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_payment:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_phone:
+    weight: 1
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_photo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_photos:
+    weight: 9
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_vehicles:
+    weight: 11
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_website:
+    weight: 3
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+  links:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

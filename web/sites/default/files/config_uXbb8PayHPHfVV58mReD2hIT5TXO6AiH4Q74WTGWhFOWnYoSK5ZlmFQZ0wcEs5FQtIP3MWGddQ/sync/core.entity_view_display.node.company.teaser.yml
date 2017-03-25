@@ -1,0 +1,47 @@
+uuid: a8ed5590-eb5c-43d9-a3cd-69762b142a2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.company.body
+    - field.field.node.company.field_credentials
+    - field.field.node.company.field_dot_insurance
+    - field.field.node.company.field_dot_snapshot
+    - field.field.node.company.field_email
+    - field.field.node.company.field_location
+    - field.field.node.company.field_payment
+    - field.field.node.company.field_phone
+    - field.field.node.company.field_photo
+    - field.field.node.company.field_photos
+    - field.field.node.company.field_vehicles
+    - field.field.node.company.field_website
+    - node.type.company
+  module:
+    - text
+    - user
+id: node.company.teaser
+targetEntityType: node
+bundle: company
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  field_credentials: true
+  field_dot_insurance: true
+  field_dot_snapshot: true
+  field_email: true
+  field_location: true
+  field_payment: true
+  field_phone: true
+  field_photo: true
+  field_photos: true
+  field_vehicles: true
+  field_website: true
+  links: true

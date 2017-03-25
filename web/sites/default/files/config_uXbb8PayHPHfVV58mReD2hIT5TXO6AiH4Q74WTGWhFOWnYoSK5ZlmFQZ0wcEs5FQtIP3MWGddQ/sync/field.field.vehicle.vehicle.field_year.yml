@@ -1,0 +1,29 @@
+uuid: 5e37998f-762c-464b-9889-49428e005219
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.vehicle.field_year
+  module:
+    - limograde_vehicle
+    - range
+id: vehicle.vehicle.field_year
+field_name: field_year
+entity_type: vehicle
+bundle: vehicle
+label: Year(s)
+description: 'For a single year, enter the <em>same</em> year in <em>both</em> fields.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1900
+  max: 2030
+  from:
+    prefix: ''
+    suffix: ''
+  to:
+    prefix: ''
+    suffix: ''
+field_type: range_integer

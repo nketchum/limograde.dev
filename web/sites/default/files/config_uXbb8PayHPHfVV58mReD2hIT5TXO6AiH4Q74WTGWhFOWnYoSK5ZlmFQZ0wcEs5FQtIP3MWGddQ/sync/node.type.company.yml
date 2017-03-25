@@ -1,0 +1,17 @@
+uuid: 40aa1d09-5a74-4c8a-ab17-4b24be83eb3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Company
+type: company
+description: 'A commercial vendor of limousines or related vehicle fleet.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

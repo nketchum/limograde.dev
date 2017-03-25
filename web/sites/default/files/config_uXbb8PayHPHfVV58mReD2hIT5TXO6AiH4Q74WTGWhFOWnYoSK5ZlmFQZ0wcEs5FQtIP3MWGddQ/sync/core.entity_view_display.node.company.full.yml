@@ -1,0 +1,207 @@
+uuid: 1a1e7b69-e298-4612-bc8c-9691277fce33
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.company.body
+    - field.field.node.company.field_credentials
+    - field.field.node.company.field_dot_insurance
+    - field.field.node.company.field_dot_snapshot
+    - field.field.node.company.field_email
+    - field.field.node.company.field_location
+    - field.field.node.company.field_payment
+    - field.field.node.company.field_phone
+    - field.field.node.company.field_photo
+    - field.field.node.company.field_photos
+    - field.field.node.company.field_vehicles
+    - field.field.node.company.field_website
+    - image.style.medium
+    - node.type.company
+  module:
+    - address
+    - field_group
+    - image
+    - link
+    - options
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_contact:
+      children:
+        - field_phone
+        - field_email
+        - field_website
+        - field_location
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Contact
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: contact
+        classes: 'well group'
+      label: Contact
+    group_details:
+      children:
+        - field_dot_snapshot
+        - field_dot_insurance
+        - field_credentials
+        - field_payment
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: Details
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: details
+        classes: 'well group'
+      label: Details
+    group_photos:
+      children:
+        - field_photo
+        - field_photos
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: Photos
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: photos
+        classes: 'well group'
+      label: Photos
+    group_vehicles:
+      children:
+        - field_vehicles
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: Fleet
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: vehicles
+        classes: 'well group'
+      label: Fleet
+id: node.company.full
+targetEntityType: node
+bundle: company
+mode: full
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+  field_credentials:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_dot_insurance:
+    weight: 3
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+  field_dot_snapshot:
+    weight: 2
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+  field_email:
+    weight: 5
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+  field_location:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+  field_payment:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_phone:
+    weight: 4
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_photo:
+    type: image
+    weight: 1
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+  field_photos:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_vehicles:
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+  field_website:
+    weight: 6
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    type: link
+hidden:
+  links: true

@@ -1,0 +1,19 @@
+uuid: 958600e0-5075-451e-8aad-959ab04e9963
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_vehicle
+    - range
+id: vehicle.field_year
+field_name: field_year
+entity_type: vehicle
+type: range_integer
+settings: {  }
+module: range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
