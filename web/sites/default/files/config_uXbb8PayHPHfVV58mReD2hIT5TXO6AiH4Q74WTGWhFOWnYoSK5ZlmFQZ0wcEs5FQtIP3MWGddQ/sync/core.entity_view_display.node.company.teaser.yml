@@ -6,9 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.company.body
     - field.field.node.company.field_credentials
-    - field.field.node.company.field_dot_number
     - field.field.node.company.field_email
-    - field.field.node.company.field_insurance
     - field.field.node.company.field_location
     - field.field.node.company.field_payment
     - field.field.node.company.field_phone
@@ -34,9 +32,7 @@ content:
     third_party_settings: {  }
 hidden:
   field_credentials: true
-  field_dot_number: true
   field_email: true
-  field_insurance: true
   field_location: true
   field_payment: true
   field_phone: true
