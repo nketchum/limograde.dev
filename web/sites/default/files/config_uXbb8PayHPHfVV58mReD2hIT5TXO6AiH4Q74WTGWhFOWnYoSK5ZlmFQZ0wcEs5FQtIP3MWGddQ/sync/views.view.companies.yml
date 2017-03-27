@@ -168,47 +168,18 @@ display:
           group_type: group
           admin_label: ''
           order: ASC
-          exposed: true
+          exposed: false
           expose:
             label: 'Company name'
           entity_type: node
           entity_field: title
           plugin_id: standard
-        created:
-          id: created
-          table: node_field_data
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: 'Date added'
-          granularity: second
-          entity_type: node
-          entity_field: created
-          plugin_id: date
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: DESC
-          exposed: true
-          expose:
-            label: 'Date modified'
-          granularity: second
-          entity_type: node
-          entity_field: changed
-          plugin_id: date
       defaults:
         sorts: false
         filters: false
         filter_groups: false
         relationships: false
+        exposed_form: true
       filters:
         field_vehicle_type_value:
           id: field_vehicle_type_value
@@ -252,27 +223,6 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            company: company
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          group: 1
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
         field_location_administrative_area:
           id: field_location_administrative_area
           table: node__field_location
@@ -312,18 +262,227 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
+                title: Alabama
+                operator: '='
+                value: AL
+              2:
+                title: Alaska
+                operator: '='
+                value: AK
+              3:
+                title: Arizona
+                operator: '='
+                value: AZ
+              4:
+                title: Arkansas
+                operator: '='
+                value: AR
+              5:
+                title: California
+                operator: '='
+                value: CA
+              6:
+                title: Colorado
+                operator: '='
+                value: CO
+              7:
+                title: Connecticut
+                operator: '='
+                value: CT
+              8:
+                title: Delaware
+                operator: '='
+                value: DE
+              9:
+                title: Florida
+                operator: '='
+                value: FL
+              10:
+                title: Georgia
+                operator: '='
+                value: GA
+              11:
+                title: Hawaii
+                operator: '='
+                value: HI
+              12:
+                title: Idaho
+                operator: '='
+                value: ID
+              13:
+                title: Illinois
+                operator: '='
+                value: IL
+              14:
+                title: Indiana
+                operator: '='
+                value: IN
+              15:
+                title: Iowa
+                operator: '='
+                value: IA
+              16:
+                title: Kansas
+                operator: '='
+                value: KS
+              17:
+                title: Kentucky
+                operator: '='
+                value: KY
+              18:
+                title: Louisiana
+                operator: '='
+                value: LA
+              19:
+                title: Maine
+                operator: '='
+                value: ME
+              20:
+                title: Maryland
+                operator: '='
+                value: MD
+              21:
+                title: Massachusetts
+                operator: '='
+                value: MA
+              22:
                 title: Michigan
                 operator: '='
                 value: MI
-              2:
+              23:
+                title: Minnesota
+                operator: '='
+                value: MN
+              24:
+                title: Mississippi
+                operator: '='
+                value: MS
+              25:
+                title: Missouri
+                operator: '='
+                value: MO
+              26:
+                title: Montana
+                operator: '='
+                value: MT
+              27:
+                title: Nebraska
+                operator: '='
+                value: NE
+              28:
+                title: Nevada
+                operator: '='
+                value: NV
+              29:
+                title: 'New Hampshire'
+                operator: '='
+                value: NH
+              30:
+                title: 'New Jersey'
+                operator: '='
+                value: NJ
+              31:
+                title: 'New Mexico'
+                operator: '='
+                value: NM
+              32:
                 title: 'New York'
                 operator: '='
                 value: NY
-              3:
-                title: ''
+              33:
+                title: 'North Carolina'
                 operator: '='
-                value: ''
+                value: NC
+              34:
+                title: 'North Dakota'
+                operator: '='
+                value: ND
+              35:
+                title: Ohio
+                operator: '='
+                value: OH
+              36:
+                title: Oklahoma
+                operator: '='
+                value: OK
+              37:
+                title: Oregon
+                operator: '='
+                value: OR
+              38:
+                title: Pennsylvania
+                operator: '='
+                value: PA
+              39:
+                title: 'Rhode Island'
+                operator: '='
+                value: RI
+              40:
+                title: 'South Carolina'
+                operator: '='
+                value: SC
+              41:
+                title: 'South Dakota'
+                operator: '='
+                value: SD
+              42:
+                title: Tennessee
+                operator: '='
+                value: TN
+              43:
+                title: Texas
+                operator: '='
+                value: TX
+              44:
+                title: Utah
+                operator: '='
+                value: UT
+              45:
+                title: Vermont
+                operator: '='
+                value: VT
+              46:
+                title: Virginia
+                operator: '='
+                value: VA
+              47:
+                title: Washington
+                operator: '='
+                value: WA
+              48:
+                title: 'West Virginia'
+                operator: '='
+                value: WV
+              49:
+                title: Wisconsin
+                operator: '='
+                value: WI
+              50:
+                title: Wyoming
+                operator: '='
+                value: WY
           plugin_id: string
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            company: company
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
       filter_groups:
         operator: AND
         groups:
@@ -338,14 +497,13 @@ display:
           admin_label: 'field_vehicles: Vehicle'
           required: false
           plugin_id: standard
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - 'url.query_args:sort_by'
-        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

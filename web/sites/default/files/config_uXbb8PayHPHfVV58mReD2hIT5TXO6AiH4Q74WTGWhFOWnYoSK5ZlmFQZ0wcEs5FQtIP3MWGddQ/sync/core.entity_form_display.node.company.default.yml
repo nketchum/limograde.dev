@@ -34,7 +34,7 @@ third_party_settings:
         - field_email
         - field_website
       parent_name: ''
-      weight: 3
+      weight: 1
       format_type: fieldset
       format_settings:
         id: ''
@@ -50,7 +50,7 @@ third_party_settings:
         - field_payment
         - body
       parent_name: ''
-      weight: 7
+      weight: 2
       format_type: fieldset
       format_settings:
         id: ''
@@ -86,7 +86,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 12
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   field_credentials:
@@ -114,7 +114,7 @@ content:
     third_party_settings: {  }
     type: number
   field_location:
-    weight: 4
+    weight: 3
     settings:
       default_country: site_default
     third_party_settings: {  }
@@ -138,14 +138,14 @@ content:
     third_party_settings: {  }
     type: image_image
   field_photos:
-    weight: 9
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
   field_vehicles:
-    weight: 10
+    weight: 5
     settings:
       form_mode: default
       override_labels: true
@@ -165,7 +165,7 @@ content:
     type: link_default
   path:
     type: path
-    weight: 13
+    weight: 8
     settings: {  }
     third_party_settings: {  }
   title:
@@ -177,7 +177,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 11
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
