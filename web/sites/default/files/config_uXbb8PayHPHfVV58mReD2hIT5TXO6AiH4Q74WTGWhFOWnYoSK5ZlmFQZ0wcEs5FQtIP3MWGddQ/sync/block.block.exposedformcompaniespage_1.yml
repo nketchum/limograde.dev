@@ -1,0 +1,29 @@
+uuid: 119fb1a3-abcc-41d0-b1df-5587c112119a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.companies
+  module:
+    - system
+    - views
+  theme:
+    - limograde
+id: exposedformcompaniespage_1
+theme: limograde
+region: search
+weight: -3
+provider: null
+plugin: 'views_exposed_filter_block:companies-page_1'
+settings:
+  id: 'views_exposed_filter_block:companies-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\ncompanies*"
+    negate: false
+    context_mapping: {  }

@@ -3,7 +3,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_tools: 0
   automated_cron: 0
-  big_pipe: 0
+  ban: 0
   block: 0
   breakpoint: 0
   config: 0
@@ -20,6 +20,7 @@ module:
   filter: 0
   image: 0
   inline_entity_form: 0
+  limograde_search: 0
   limograde_vehicle: 0
   link: 0
   menu_link_content: 0
