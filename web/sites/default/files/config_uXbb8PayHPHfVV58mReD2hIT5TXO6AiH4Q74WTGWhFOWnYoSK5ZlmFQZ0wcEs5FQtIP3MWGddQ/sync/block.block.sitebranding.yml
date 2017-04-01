@@ -1,0 +1,23 @@
+uuid: f3598bc1-ec8d-4f84-95f2-fbd3e15b0f97
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - limograde
+id: sitebranding
+theme: limograde
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: false
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

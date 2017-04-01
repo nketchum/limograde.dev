@@ -20,6 +20,7 @@ module:
   filter: 0
   image: 0
   inline_entity_form: 0
+  limograde_company: 0
   limograde_search: 0
   limograde_vehicle: 0
   link: 0

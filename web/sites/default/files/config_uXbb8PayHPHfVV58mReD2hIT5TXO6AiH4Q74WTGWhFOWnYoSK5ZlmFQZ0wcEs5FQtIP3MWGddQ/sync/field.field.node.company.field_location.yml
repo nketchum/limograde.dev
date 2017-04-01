@@ -39,9 +39,9 @@ settings:
     locality: locality
     postalCode: postalCode
     addressLine1: addressLine1
-    addressLine2: addressLine2
     dependentLocality: '0'
     sortingCode: '0'
+    addressLine2: '0'
     organization: '0'
     givenName: '0'
     additionalName: '0'

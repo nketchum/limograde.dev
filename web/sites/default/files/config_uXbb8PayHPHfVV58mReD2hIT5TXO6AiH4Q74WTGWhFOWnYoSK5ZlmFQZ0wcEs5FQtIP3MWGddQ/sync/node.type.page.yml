@@ -1,0 +1,19 @@
+uuid: f1eb971f-eeae-4ff7-9a7d-b368f10826ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - footer
+      - main
+    parent: 'main:'
+name: Page
+type: page
+description: 'Create a basic formatted text page.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

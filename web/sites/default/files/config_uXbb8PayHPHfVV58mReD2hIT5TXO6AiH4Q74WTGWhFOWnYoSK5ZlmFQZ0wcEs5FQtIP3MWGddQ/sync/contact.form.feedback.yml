@@ -1,0 +1,12 @@
+uuid: d1e8ca91-758a-42ba-9aac-961c6512c5cc
+langcode: en
+status: true
+dependencies: {  }
+id: feedback
+label: Feedback
+recipients:
+  - support@limograde.com
+reply: ''
+weight: 0
+message: 'Your feedback has been sent. Thank you!'
+redirect: /
