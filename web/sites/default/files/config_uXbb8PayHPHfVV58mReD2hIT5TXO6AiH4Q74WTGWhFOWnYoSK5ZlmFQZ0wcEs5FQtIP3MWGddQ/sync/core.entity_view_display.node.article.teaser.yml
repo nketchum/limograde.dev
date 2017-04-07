@@ -21,5 +21,6 @@ content:
     settings:
       trim_length: 250
     third_party_settings: {  }
+    region: content
 hidden:
   links: true

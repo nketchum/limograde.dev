@@ -21,11 +21,12 @@ bundle: vehicle
 mode: default
 content:
   field_amenities:
-    weight: 6
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_day:
     weight: 4
     label: inline
@@ -36,6 +37,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
+    region: content
   field_hour:
     weight: 3
     label: inline
@@ -46,6 +48,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
+    region: content
   field_mile:
     weight: 5
     label: inline
@@ -56,6 +59,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_decimal
+    region: content
   field_qty:
     weight: 1
     label: inline
@@ -64,6 +68,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_seats:
     weight: 2
     label: inline
@@ -72,14 +77,16 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_vehicle_type:
     weight: 0
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_year:
-    weight: 7
+    weight: 6
     label: inline
     settings:
       range_separator: '-'
@@ -89,5 +96,6 @@ content:
       to_prefix_suffix: false
     third_party_settings: {  }
     type: range_integer
+    region: content
 hidden:
   user_id: true

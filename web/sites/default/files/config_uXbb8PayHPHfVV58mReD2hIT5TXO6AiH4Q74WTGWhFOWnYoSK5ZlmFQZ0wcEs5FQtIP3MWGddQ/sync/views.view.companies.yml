@@ -551,7 +551,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: '<p>No results to display.</p>'
+          content: '<h4>No results to display.</h4>'
           plugin_id: text_custom
     cache_metadata:
       max-age: -1

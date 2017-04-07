@@ -2,6 +2,8 @@ uuid: 50728fe2-dc2e-4e8f-8f7a-8c79cd44de36
 langcode: en
 status: true
 dependencies:
+  module:
+    - system
   theme:
     - limograde
 _core:
@@ -17,4 +19,9 @@ settings:
   label: 'Page title'
   provider: core
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/node/add*\r\n/node/*/edit\r\n/companies*\r\n/company/*"
+    negate: true
+    context_mapping: {  }

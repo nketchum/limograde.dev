@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.company.field_photo
     - field.field.node.company.field_photos
     - field.field.node.company.field_vehicles
+    - field.field.node.company.field_view_vehicles
     - field.field.node.company.field_website
     - image.style.thumbnail
     - node.type.company
@@ -26,6 +27,7 @@ dependencies:
     - path
     - telephone
     - text
+    - viewfield
 third_party_settings:
   field_group:
     group_contact:
@@ -84,22 +86,26 @@ content:
       placeholder: 'A longer company description...'
       summary_rows: 3
     third_party_settings: {  }
+    region: content
   created:
     type: datetime_timestamp
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_credentials:
     weight: 36
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_dot_number:
     weight: 34
     settings:
       placeholder: '123456'
     third_party_settings: {  }
     type: number
+    region: content
   field_email:
     weight: 7
     settings:
@@ -107,29 +113,34 @@ content:
       placeholder: name@email.com
     third_party_settings: {  }
     type: email_default
+    region: content
   field_insurance:
     weight: 35
     settings:
       placeholder: '1000000'
     third_party_settings: {  }
     type: number
+    region: content
   field_location:
     weight: 3
     settings:
       default_country: site_default
     third_party_settings: {  }
     type: address_default
+    region: content
   field_payment:
     weight: 37
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
   field_phone:
     weight: 6
     settings:
       placeholder: 555-555-5555
     third_party_settings: {  }
     type: telephone_default
+    region: content
   field_photo:
     weight: 2
     settings:
@@ -137,6 +148,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_photos:
     weight: 4
     settings:
@@ -144,6 +156,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_vehicles:
     weight: 5
     settings:
@@ -156,6 +169,13 @@ content:
       allow_existing: false
     third_party_settings: {  }
     type: inline_entity_form_complex
+    region: content
+  field_view_vehicles:
+    weight: 39
+    settings: {  }
+    third_party_settings: {  }
+    type: viewfield_select
+    region: content
   field_website:
     weight: 8
     settings:
@@ -163,11 +183,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
   path:
     type: path
     weight: 8
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 1
@@ -175,6 +197,7 @@ content:
       size: 60
       placeholder: 'LimoCity, Inc.'
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 6
@@ -183,6 +206,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   promote: true
   sticky: true

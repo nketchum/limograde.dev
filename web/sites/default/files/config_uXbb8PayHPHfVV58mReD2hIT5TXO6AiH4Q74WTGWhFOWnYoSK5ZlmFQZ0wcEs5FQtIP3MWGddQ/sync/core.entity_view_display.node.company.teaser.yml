@@ -15,11 +15,77 @@ dependencies:
     - field.field.node.company.field_photo
     - field.field.node.company.field_photos
     - field.field.node.company.field_vehicles
+    - field.field.node.company.field_view_vehicles
     - field.field.node.company.field_website
+    - image.style.medium
+    - image.style.thumbnail
     - node.type.company
   module:
+    - address
+    - colorbox
+    - field_group
+    - image
+    - link
+    - options
     - text
     - user
+    - viewfield
+third_party_settings:
+  field_group:
+    group_basic:
+      children:
+        - field_photo
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: basic
+        classes: group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Basic
+    group_contact:
+      children:
+        - field_phone
+        - field_email
+        - field_website
+        - field_location
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: contact
+        classes: group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Contact
+    group_details:
+      children:
+        - field_dot_number
+        - field_insurance
+        - field_credentials
+        - field_payment
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: details
+        classes: group
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Details
 id: node.company.teaser
 targetEntityType: node
 bundle: company
@@ -28,20 +94,110 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 4
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
+  field_credentials:
+    type: list_default
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_dot_number:
+    type: number_integer
+    weight: 5
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_email:
+    type: basic_string
+    weight: 10
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_insurance:
+    type: number_integer
+    weight: 6
+    label: inline
+    settings:
+      thousand_separator: ','
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_location:
+    type: address_default
+    weight: 12
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_payment:
+    type: list_default
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_phone:
+    type: string
+    weight: 9
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_photo:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_photos:
+    type: colorbox
+    weight: 3
+    label: hidden
+    settings:
+      colorbox_node_style: thumbnail
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    region: content
+  field_view_vehicles:
+    type: viewfield_default
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      view_title: above
+      empty_view_title: hidden
+      always_build_output: 0
+    third_party_settings: {  }
+  field_website:
+    type: link
+    weight: 11
+    label: inline
+    settings:
+      trim_length: 80
+      rel: nofollow
+      target: _blank
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    region: content
 hidden:
-  field_credentials: true
-  field_dot_number: true
-  field_email: true
-  field_insurance: true
-  field_location: true
-  field_payment: true
-  field_phone: true
-  field_photo: true
-  field_photos: true
   field_vehicles: true
-  field_website: true
   links: true

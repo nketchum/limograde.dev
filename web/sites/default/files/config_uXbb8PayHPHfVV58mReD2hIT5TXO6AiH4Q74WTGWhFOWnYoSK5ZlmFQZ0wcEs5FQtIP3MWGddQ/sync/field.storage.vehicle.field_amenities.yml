@@ -18,6 +18,9 @@ settings:
       value: Alch
       label: Alch
     -
+      value: Bar
+      label: Bar
+    -
       value: CD
       label: CD
     -
@@ -29,6 +32,9 @@ settings:
     -
       value: PA
       label: PA
+    -
+      value: USB
+      label: USB
     -
       value: WiFi
       label: WiFi

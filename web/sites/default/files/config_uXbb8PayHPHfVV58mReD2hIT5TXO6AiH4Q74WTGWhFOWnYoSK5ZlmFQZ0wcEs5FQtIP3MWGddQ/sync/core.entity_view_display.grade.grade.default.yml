@@ -1,0 +1,50 @@
+uuid: 0151df7d-79a1-46c8-988b-6b44ab37ebeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.grade.grade.field_company
+    - field.field.grade.grade.field_grade
+    - field.field.grade.grade.field_name
+  module:
+    - double_field
+    - limograde_grade
+    - options
+id: grade.grade.default
+targetEntityType: grade
+bundle: grade
+mode: default
+content:
+  field_company:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_grade:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_name:
+    weight: 2
+    label: above
+    settings:
+      inline: true
+      first:
+        hidden: false
+        prefix: ''
+        suffix: ''
+      second:
+        hidden: false
+        prefix: ''
+        suffix: ''
+    third_party_settings: {  }
+    type: double_field_unformatted_list
+    region: content
+hidden:
+  user_id: true

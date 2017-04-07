@@ -1,9 +1,9 @@
-uuid: 1a1e7b69-e298-4612-bc8c-9691277fce33
+uuid: adb292a1-0b06-43b9-87fb-6b7e0a9c1411
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.full
+    - core.entity_view_mode.node.mini
     - field.field.node.company.body
     - field.field.node.company.field_credentials
     - field.field.node.company.field_dot_number
@@ -18,18 +18,14 @@ dependencies:
     - field.field.node.company.field_view_vehicles
     - field.field.node.company.field_website
     - image.style.medium
-    - image.style.thumbnail
     - node.type.company
   module:
     - address
-    - colorbox
     - field_group
     - image
     - link
     - options
-    - text
     - user
-    - viewfield
 third_party_settings:
   field_group:
     group_contact:
@@ -42,15 +38,14 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        label: Contact
+        id: contact
+        classes: group
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: contact
-        classes: group
       label: Contact
     group_details:
       children:
@@ -62,93 +57,84 @@ third_party_settings:
       weight: 1
       format_type: html_element
       format_settings:
-        label: Details
+        id: details
+        classes: group
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: details
-        classes: group
       label: Details
-    group_photos:
+    group_basic:
       children:
         - field_photo
       parent_name: ''
       weight: 2
       format_type: html_element
       format_settings:
-        label: Photos
+        id: basic
+        classes: group
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-        id: photos
-        classes: group
-      label: Photos
-id: node.company.full
+      label: Basic
+id: node.company.mini
 targetEntityType: node
 bundle: company
-mode: full
+mode: mini
 content:
-  body:
-    label: hidden
-    type: text_default
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   field_credentials:
-    weight: 2
-    label: above
+    weight: 5
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_dot_number:
-    type: number_integer
-    weight: 0
+    weight: 3
     label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
+    type: number_integer
     region: content
   field_email:
-    weight: 5
+    weight: 2
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
     region: content
   field_insurance:
-    type: number_integer
-    weight: 1
+    weight: 4
     label: inline
     settings:
       thousand_separator: ','
       prefix_suffix: true
     third_party_settings: {  }
+    type: number_integer
     region: content
   field_location:
-    weight: 7
-    label: above
+    weight: 4
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_payment:
-    weight: 3
-    label: above
+    weight: 6
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_phone:
-    weight: 4
+    weight: 1
     label: inline
     settings:
       link_to_entity: false
@@ -156,40 +142,16 @@ content:
     type: string
     region: content
   field_photo:
-    type: image
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       image_style: medium
       image_link: ''
     third_party_settings: {  }
+    type: image
     region: content
-  field_photos:
-    weight: 3
-    label: hidden
-    settings:
-      colorbox_node_style: thumbnail
-      colorbox_node_style_first: ''
-      colorbox_image_style: ''
-      colorbox_gallery: post
-      colorbox_gallery_custom: ''
-      colorbox_caption: auto
-      colorbox_caption_custom: ''
-    third_party_settings: {  }
-    type: colorbox
-    region: content
-  field_view_vehicles:
-    type: viewfield_default
-    weight: 5
-    region: content
-    label: hidden
-    settings:
-      view_title: hidden
-      empty_view_title: hidden
-      always_build_output: 0
-    third_party_settings: {  }
   field_website:
-    weight: 6
+    weight: 3
     label: inline
     settings:
       trim_length: 80
@@ -201,5 +163,8 @@ content:
     type: link
     region: content
 hidden:
+  body: true
+  field_photos: true
   field_vehicles: true
+  field_view_vehicles: true
   links: true

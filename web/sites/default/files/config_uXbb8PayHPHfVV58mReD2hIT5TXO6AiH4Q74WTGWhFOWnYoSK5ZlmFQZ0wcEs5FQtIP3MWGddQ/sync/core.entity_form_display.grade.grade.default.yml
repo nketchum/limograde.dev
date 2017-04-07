@@ -1,0 +1,58 @@
+uuid: f6008591-b85f-4312-b104-70a0481c0789
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.grade.grade.field_company
+    - field.field.grade.grade.field_grade
+    - field.field.grade.grade.field_name
+  module:
+    - double_field
+    - limograde_grade
+id: grade.grade.default
+targetEntityType: grade
+bundle: grade
+mode: default
+content:
+  field_company:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_grade:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_name:
+    weight: 3
+    settings:
+      inline: true
+      first:
+        type: textfield
+        size: 10
+        placeholder: Jane
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+      second:
+        type: textfield
+        size: 10
+        placeholder: Smith
+        label: Ok
+        cols: 10
+        rows: 5
+        prefix: ''
+        suffix: ''
+    third_party_settings: {  }
+    type: double_field
+    region: content
+hidden:
+  user_id: true

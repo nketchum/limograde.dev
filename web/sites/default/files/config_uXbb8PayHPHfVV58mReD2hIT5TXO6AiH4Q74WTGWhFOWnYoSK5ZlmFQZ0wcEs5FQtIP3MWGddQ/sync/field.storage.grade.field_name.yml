@@ -1,0 +1,30 @@
+uuid: 6b5f02b6-adf2-4efc-9114-42b20e89533e
+langcode: en
+status: true
+dependencies:
+  module:
+    - double_field
+    - limograde_grade
+id: grade.field_name
+field_name: field_name
+entity_type: grade
+type: double_field
+settings:
+  storage:
+    first:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+    second:
+      type: string
+      maxlength: 255
+      precision: 10
+      scale: 2
+module: double_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

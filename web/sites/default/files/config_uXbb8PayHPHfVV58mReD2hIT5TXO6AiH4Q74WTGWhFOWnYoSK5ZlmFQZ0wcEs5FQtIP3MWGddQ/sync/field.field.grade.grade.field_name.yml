@@ -1,0 +1,37 @@
+uuid: ce75ad3b-e932-4e5c-b683-47cd3078cc7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.grade.field_name
+  module:
+    - double_field
+    - limograde_grade
+id: grade.grade.field_name
+field_name: field_name
+entity_type: grade
+bundle: grade
+label: Name
+description: 'Prove your first and last name.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  first:
+    required: true
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+  second:
+    required: true
+    list: false
+    allowed_values: {  }
+    max: null
+    min: null
+    on_label: 'On'
+    off_label: 'Off'
+field_type: double_field

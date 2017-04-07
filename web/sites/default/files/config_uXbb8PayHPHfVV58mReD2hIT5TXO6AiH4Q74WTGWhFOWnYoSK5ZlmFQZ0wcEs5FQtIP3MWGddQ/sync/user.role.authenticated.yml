@@ -11,4 +11,6 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access site-wide contact form'
+  - 'add grade entities'
+  - 'view published grade entities'
   - 'view published vehicle entities'

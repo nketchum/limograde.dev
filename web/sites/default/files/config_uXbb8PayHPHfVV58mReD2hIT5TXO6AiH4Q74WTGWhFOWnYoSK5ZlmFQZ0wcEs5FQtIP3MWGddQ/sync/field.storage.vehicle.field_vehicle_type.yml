@@ -27,6 +27,9 @@ settings:
       value: 'Luxury SUV'
       label: 'Luxury SUV'
     -
+      value: 'Shuttle bus'
+      label: 'Shuttle bus'
+    -
       value: 'Stretch limousine'
       label: 'Stretch limousine'
     -

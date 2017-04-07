@@ -6,12 +6,14 @@ module:
   ban: 0
   block: 0
   breakpoint: 0
+  colorbox: 0
   config: 0
   contact: 0
   contextual: 0
   ctools: 0
   dblog: 0
   devel: 0
+  double_field: 0
   dynamic_page_cache: 0
   field: 0
   field_group: 0
@@ -21,7 +23,9 @@ module:
   image: 0
   inline_entity_form: 0
   limograde_company: 0
+  limograde_grade: 0
   limograde_search: 0
+  limograde_tweaks: 0
   limograde_vehicle: 0
   link: 0
   menu_link_content: 0
@@ -39,8 +43,10 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  viewfield: 0
   views: 0
   views_ui: 0
+  webprofiler: 0
   pathauto: 1
   minimal: 1000
 theme:
@@ -51,3 +57,4 @@ theme:
   limograde: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+profile: minimal
