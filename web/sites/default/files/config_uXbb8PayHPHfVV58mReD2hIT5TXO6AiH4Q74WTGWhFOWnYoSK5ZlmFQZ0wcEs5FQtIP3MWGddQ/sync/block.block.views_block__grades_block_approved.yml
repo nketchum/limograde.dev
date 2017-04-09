@@ -1,0 +1,39 @@
+uuid: f0430e7a-1ab9-4b7c-8ea7-3dfdabc2397b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.grades
+  module:
+    - ctools
+    - system
+    - views
+  theme:
+    - limograde
+id: views_block__grades_block_approved
+theme: limograde
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:grades-block_approved'
+settings:
+  id: 'views_block:grades-block_approved'
+  label: 'Customer grades'
+  provider: views
+  label_display: visible
+  views_label: 'Customer grades'
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      company: company
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/add*\r\n/node/*/edit\r\n/node/*/delete"
+    negate: true
+    context_mapping: {  }

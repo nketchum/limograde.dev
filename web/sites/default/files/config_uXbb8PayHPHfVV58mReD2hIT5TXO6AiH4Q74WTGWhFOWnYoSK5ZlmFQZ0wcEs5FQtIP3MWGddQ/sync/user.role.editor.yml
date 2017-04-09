@@ -10,6 +10,7 @@ permissions:
   - 'access contextual links'
   - 'access user profiles'
   - 'add vehicle entities'
+  - 'always view any average grade'
   - 'change own username'
   - 'create article content'
   - 'create company content'

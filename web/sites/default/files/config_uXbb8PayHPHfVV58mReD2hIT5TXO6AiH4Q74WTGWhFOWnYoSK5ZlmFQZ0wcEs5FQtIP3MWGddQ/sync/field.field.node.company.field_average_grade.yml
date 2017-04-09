@@ -1,0 +1,25 @@
+uuid: 51952dae-08cd-459a-b006-ba43f2c49f36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_average_grade
+    - node.type.company
+  module:
+    - limograde_grade
+id: node.company.field_average_grade
+field_name: field_average_grade
+entity_type: node
+bundle: company
+label: Grade
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Public grades'
+  off_label: 'Private grades'
+field_type: average_grade

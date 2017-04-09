@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.company.body
+    - field.field.node.company.field_average_grade
     - field.field.node.company.field_credentials
     - field.field.node.company.field_dot_number
     - field.field.node.company.field_email
@@ -23,6 +24,7 @@ dependencies:
     - field_group
     - image
     - inline_entity_form
+    - limograde_grade
     - link
     - path
     - telephone
@@ -64,6 +66,7 @@ third_party_settings:
       children:
         - title
         - field_photo
+        - field_average_grade
       parent_name: ''
       weight: 0
       format_type: fieldset
@@ -92,6 +95,13 @@ content:
     weight: 7
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_average_grade:
+    weight: 3
+    settings:
+      display_label: 0
+    third_party_settings: {  }
+    type: average_grade
     region: content
   field_credentials:
     weight: 36
@@ -171,7 +181,7 @@ content:
     type: inline_entity_form_complex
     region: content
   field_view_vehicles:
-    weight: 39
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: viewfield_select

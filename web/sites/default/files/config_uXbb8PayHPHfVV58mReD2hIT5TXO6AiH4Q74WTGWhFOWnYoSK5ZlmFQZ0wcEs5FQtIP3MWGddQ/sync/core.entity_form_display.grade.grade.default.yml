@@ -8,14 +8,31 @@ dependencies:
     - field.field.grade.grade.field_name
   module:
     - double_field
+    - field_group
     - limograde_grade
+third_party_settings:
+  field_group:
+    group_basic:
+      children:
+        - field_name
+        - field_grade
+        - field_company
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Basic
 id: grade.grade.default
 targetEntityType: grade
 bundle: grade
 mode: default
 content:
   field_company:
-    weight: 1
+    weight: 2
     settings:
       match_operator: CONTAINS
       size: 60
@@ -24,13 +41,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_grade:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_name:
-    weight: 3
+    weight: 0
     settings:
       inline: true
       first:

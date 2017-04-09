@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.company.body
+    - field.field.node.company.field_average_grade
     - field.field.node.company.field_credentials
     - field.field.node.company.field_dot_number
     - field.field.node.company.field_email
@@ -17,6 +18,7 @@ dependencies:
     - field.field.node.company.field_vehicles
     - field.field.node.company.field_view_vehicles
     - field.field.node.company.field_website
+    - image.style.large
     - image.style.medium
     - image.style.thumbnail
     - node.type.company
@@ -25,6 +27,7 @@ dependencies:
     - colorbox
     - field_group
     - image
+    - limograde_grade
     - link
     - options
     - text
@@ -50,6 +53,7 @@ third_party_settings:
       label: Basic
     group_contact:
       children:
+        - field_average_grade
         - field_phone
         - field_email
         - field_website
@@ -93,15 +97,24 @@ mode: teaser
 content:
   body:
     label: hidden
-    type: text_summary_or_trimmed
+    type: text_default
     weight: 4
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     region: content
+  field_average_grade:
+    type: average_grade
+    weight: 6
+    region: content
+    label: inline
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
   field_credentials:
     type: list_default
-    weight: 7
+    weight: 8
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -117,14 +130,14 @@ content:
     region: content
   field_email:
     type: basic_string
-    weight: 10
+    weight: 8
     label: inline
     settings: {  }
     third_party_settings: {  }
     region: content
   field_insurance:
     type: number_integer
-    weight: 6
+    weight: 7
     label: inline
     settings:
       thousand_separator: ','
@@ -133,21 +146,21 @@ content:
     region: content
   field_location:
     type: address_default
-    weight: 12
+    weight: 10
     label: inline
     settings: {  }
     third_party_settings: {  }
     region: content
   field_payment:
     type: list_default
-    weight: 8
+    weight: 9
     label: inline
     settings: {  }
     third_party_settings: {  }
     region: content
   field_phone:
     type: string
-    weight: 9
+    weight: 7
     label: inline
     settings:
       link_to_entity: false
@@ -169,10 +182,10 @@ content:
     settings:
       colorbox_node_style: thumbnail
       colorbox_node_style_first: ''
-      colorbox_image_style: ''
+      colorbox_image_style: large
       colorbox_gallery: post
       colorbox_gallery_custom: ''
-      colorbox_caption: auto
+      colorbox_caption: none
       colorbox_caption_custom: ''
     third_party_settings: {  }
     region: content
@@ -180,15 +193,15 @@ content:
     type: viewfield_default
     weight: 5
     region: content
-    label: hidden
+    label: above
     settings:
-      view_title: above
+      view_title: hidden
       empty_view_title: hidden
       always_build_output: 0
     third_party_settings: {  }
   field_website:
     type: link
-    weight: 11
+    weight: 9
     label: inline
     settings:
       trim_length: 80

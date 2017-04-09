@@ -12,62 +12,94 @@ dependencies:
     - field.field.vehicle.vehicle.field_vehicle_type
     - field.field.vehicle.vehicle.field_year
   module:
+    - field_group
     - limograde_vehicle
     - range
+third_party_settings:
+  field_group:
+    group_basic:
+      children:
+        - field_vehicle_type
+        - field_qty
+        - field_seats
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Basic
+    group_details:
+      children:
+        - field_hour
+        - field_day
+        - field_mile
+        - field_amenities
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Details
 id: vehicle.vehicle.default
 targetEntityType: vehicle
 bundle: vehicle
 mode: default
 content:
   field_amenities:
-    weight: 6
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_day:
-    weight: 4
+    weight: 3
     settings:
       placeholder: '500.00'
     third_party_settings: {  }
     type: number
     region: content
   field_hour:
-    weight: 3
+    weight: 2
     settings:
       placeholder: '100.00'
     third_party_settings: {  }
     type: number
     region: content
   field_mile:
-    weight: 5
+    weight: 4
     settings:
       placeholder: '1.00'
     third_party_settings: {  }
     type: number
     region: content
   field_qty:
-    weight: 1
+    weight: 2
     settings:
       placeholder: '1'
     third_party_settings: {  }
     type: number
     region: content
   field_seats:
-    weight: 2
+    weight: 3
     settings:
       placeholder: '10'
     third_party_settings: {  }
     type: number
     region: content
   field_vehicle_type:
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_year:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: range

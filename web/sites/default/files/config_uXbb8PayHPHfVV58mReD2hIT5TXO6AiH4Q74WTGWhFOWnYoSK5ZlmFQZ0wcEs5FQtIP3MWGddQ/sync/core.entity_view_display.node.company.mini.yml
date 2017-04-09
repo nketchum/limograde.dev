@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.mini
     - field.field.node.company.body
+    - field.field.node.company.field_average_grade
     - field.field.node.company.field_credentials
     - field.field.node.company.field_dot_number
     - field.field.node.company.field_email
@@ -88,7 +89,7 @@ bundle: company
 mode: mini
 content:
   field_credentials:
-    weight: 5
+    weight: 6
     label: inline
     settings: {  }
     third_party_settings: {  }
@@ -104,14 +105,14 @@ content:
     type: number_integer
     region: content
   field_email:
-    weight: 2
+    weight: 6
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: email_mailto
     region: content
   field_insurance:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       thousand_separator: ','
@@ -120,21 +121,21 @@ content:
     type: number_integer
     region: content
   field_location:
-    weight: 4
+    weight: 8
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_payment:
-    weight: 6
+    weight: 7
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_phone:
-    weight: 1
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -151,7 +152,7 @@ content:
     type: image
     region: content
   field_website:
-    weight: 3
+    weight: 7
     label: inline
     settings:
       trim_length: 80
@@ -164,6 +165,7 @@ content:
     region: content
 hidden:
   body: true
+  field_average_grade: true
   field_photos: true
   field_vehicles: true
   field_view_vehicles: true

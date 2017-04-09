@@ -13,19 +13,19 @@ settings:
   allowed_values:
     -
       value: 4
-      label: A
+      label: 'A - Excellent'
     -
       value: 3
-      label: B
+      label: 'B - Good'
     -
       value: 2
-      label: C
+      label: 'C - Average'
     -
       value: 1
-      label: D
+      label: 'D - Poor'
     -
       value: 0
-      label: E
+      label: 'E - Terrible'
   allowed_values_function: ''
 module: options
 locked: false
