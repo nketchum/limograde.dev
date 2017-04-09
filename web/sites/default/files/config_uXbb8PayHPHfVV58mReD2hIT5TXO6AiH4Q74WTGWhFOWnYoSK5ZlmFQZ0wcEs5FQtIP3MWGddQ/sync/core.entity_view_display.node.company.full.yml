@@ -18,7 +18,7 @@ dependencies:
     - field.field.node.company.field_vehicles
     - field.field.node.company.field_view_vehicles
     - field.field.node.company.field_website
-    - image.style.large
+    - image.style.full
     - image.style.medium
     - image.style.thumbnail
     - node.type.company
@@ -185,7 +185,7 @@ content:
     settings:
       colorbox_node_style: thumbnail
       colorbox_node_style_first: ''
-      colorbox_image_style: large
+      colorbox_image_style: full
       colorbox_gallery: post
       colorbox_gallery_custom: ''
       colorbox_caption: none
