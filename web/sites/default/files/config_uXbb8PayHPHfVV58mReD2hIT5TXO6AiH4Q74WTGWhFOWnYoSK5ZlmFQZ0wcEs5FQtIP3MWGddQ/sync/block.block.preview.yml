@@ -1,0 +1,20 @@
+uuid: e1a8ee2d-0271-4199-9e88-7240da6d747e
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_quote
+  theme:
+    - limograde
+id: preview
+theme: limograde
+region: footer
+weight: -6
+provider: null
+plugin: preview
+settings:
+  id: preview
+  label: Preview
+  provider: limograde_quote
+  label_display: '0'
+visibility: {  }

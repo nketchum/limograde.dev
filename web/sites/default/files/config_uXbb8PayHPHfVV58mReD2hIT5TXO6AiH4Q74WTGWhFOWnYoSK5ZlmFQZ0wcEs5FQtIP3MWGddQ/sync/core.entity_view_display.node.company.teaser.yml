@@ -145,7 +145,7 @@ content:
     third_party_settings: {  }
     region: content
   field_location:
-    type: address_default
+    type: address_plain
     weight: 10
     label: inline
     settings: {  }
@@ -193,7 +193,7 @@ content:
     type: viewfield_default
     weight: 5
     region: content
-    label: above
+    label: hidden
     settings:
       view_title: hidden
       empty_view_title: hidden

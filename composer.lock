@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "04c6c1da5bf56655e8707fb0e59b79b7",
-    "content-hash": "ffe84becf6be7623edb682db6ed3e6f5",
+    "hash": "77bb30b882e99fd14003ad4a816c8704",
+    "content-hash": "38c3c719bcca180088a051850fbfb73c",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1380,17 +1380,17 @@
         },
         {
             "name": "drupal/bootstrap",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/bootstrap",
-                "reference": "8.x-3.2"
+                "reference": "8.x-3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.2.zip",
-                "reference": "8.x-3.2",
-                "shasum": "1638ded543a50a5dce558c2a8177a945a3e5a4cb"
+                "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.3.zip",
+                "reference": null,
+                "shasum": "008a0c795bc4ad20987fa34a456524740030d77b"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -1401,8 +1401,8 @@
                     "dev-3.x": "3.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-3.2",
-                    "datestamp": "1487640876"
+                    "version": "8.x-3.3",
+                    "datestamp": "1491860942"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -3280,6 +3280,17 @@
                 }
             ],
             "time": "2015-04-20 18:58:01"
+        },
+        {
+            "name": "js-cookie/js-cookie",
+            "version": "2.1.4",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/js-cookie/js-cookie/archive/v2.1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "drupal-library"
         },
         {
             "name": "masterminds/html5",

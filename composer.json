@@ -17,6 +17,18 @@
         {
             "type": "package",
             "package": {
+                "name": "js-cookie/js-cookie",
+                "version": "2.1.4",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/js-cookie/js-cookie/archive/v2.1.4.zip",
+                    "type": "zip"
+                 }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
                 "name": "jackmoore/colorbox",
                 "version": "master",
                 "type": "drupal-library",
@@ -60,7 +72,8 @@
         "drupal/viewfield": "~3.0",
         "drush/drush": "~8.0",
         "harvesthq/chosen": "~1.0",
-        "jackmoore/colorbox": "master"
+        "jackmoore/colorbox": "master",
+        "js-cookie/js-cookie": "~2.1.0"
     },
     "require-dev": {
         "behat/mink": "~1.7",

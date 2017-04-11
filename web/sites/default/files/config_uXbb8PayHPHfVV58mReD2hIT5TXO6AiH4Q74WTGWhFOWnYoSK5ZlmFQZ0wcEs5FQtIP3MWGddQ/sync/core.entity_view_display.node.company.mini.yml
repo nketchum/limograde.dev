@@ -125,7 +125,7 @@ content:
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: address_default
+    type: address_plain
     region: content
   field_payment:
     weight: 7

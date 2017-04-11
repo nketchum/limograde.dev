@@ -544,7 +544,7 @@ display:
           required: false
           plugin_id: standard
       exposed_block: true
-      use_ajax: true
+      use_ajax: false
       empty:
         area_text_custom:
           id: area_text_custom

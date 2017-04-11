@@ -425,8 +425,19 @@ display:
           entity_type: grade
           entity_field: created
           plugin_id: date
-      title: Grades
-      header: {  }
+      title: 'Customer grades'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content: '<h4 class="block-title">[view:title]</h4>'
+          plugin_id: text_custom
       footer: {  }
       empty: {  }
       relationships:
@@ -476,6 +487,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       use_ajax: true
+      css_class: 'panel panel-default panel-body'
     cache_metadata:
       max-age: 0
       contexts:
@@ -503,6 +515,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        header: true
       fields:
         field_name:
           id: field_name
@@ -868,6 +881,7 @@ display:
         fields: false
         filters: false
         filter_groups: false
+        title: false
       fields:
         field_name:
           id: field_name
@@ -1205,6 +1219,7 @@ display:
         groups:
           1: AND
       block_hide_empty: true
+      title: 'Customer grades (unapproved)'
     cache_metadata:
       max-age: 0
       contexts:
