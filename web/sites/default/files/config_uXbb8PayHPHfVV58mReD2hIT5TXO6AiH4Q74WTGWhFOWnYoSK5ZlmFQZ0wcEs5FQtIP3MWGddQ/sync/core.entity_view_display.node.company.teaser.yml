@@ -37,19 +37,22 @@ third_party_settings:
   field_group:
     group_basic:
       children:
-        - field_photo
+        - group_contact
+        - group_details
+        - group_description
       parent_name: ''
-      weight: 2
+      weight: 1
       format_type: html_element
       format_settings:
-        id: basic
-        classes: group
+        label: Basic
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'groups groups-basic'
       label: Basic
     group_contact:
       children:
@@ -58,18 +61,19 @@ third_party_settings:
         - field_email
         - field_website
         - field_location
-      parent_name: ''
-      weight: 0
+      parent_name: group_basic
+      weight: 1
       format_type: html_element
       format_settings:
-        id: contact
-        classes: group
+        label: Contact
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'group group-contact'
       label: Contact
     group_details:
       children:
@@ -77,19 +81,55 @@ third_party_settings:
         - field_insurance
         - field_credentials
         - field_payment
-      parent_name: ''
-      weight: 1
+      parent_name: group_basic
+      weight: 2
       format_type: html_element
       format_settings:
-        id: details
-        classes: group
+        label: Details
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'group group-detail'
       label: Details
+    group_description:
+      children:
+        - body
+      parent_name: group_basic
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: Description
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'group group-description'
+      label: Description
+    group_photos:
+      children:
+        - field_photo
+        - field_photos
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Photos
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'groups groups-photos'
+      label: Photos
 id: node.company.teaser
 targetEntityType: node
 bundle: company
@@ -98,7 +138,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -168,7 +208,7 @@ content:
     region: content
   field_photo:
     type: image
-    weight: 0
+    weight: 2
     label: hidden
     settings:
       image_style: medium
@@ -191,7 +231,7 @@ content:
     region: content
   field_view_vehicles:
     type: viewfield_default
-    weight: 5
+    weight: 2
     region: content
     label: hidden
     settings:

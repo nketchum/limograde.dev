@@ -434,12 +434,23 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: false
-          tokenize: false
-          content: '<h4 class="block-title">[view:title]</h4>'
+          empty: true
+          tokenize: true
+          content: "<div class=\"grade\"><a href=\"/grade/add?company={{ arguments.field_company_target_id }}&destination=/node/{{ arguments.field_company_target_id }}\" class=\"btn btn-xs btn-info\">Add your grade</a></div>\n<h4 class=\"block-title\">[view:title]</h4>"
           plugin_id: text_custom
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<p><strong>No one has graded this company yet.</strong></p>'
+          plugin_id: text_custom
       relationships:
         field_company:
           id: field_company
@@ -487,7 +498,7 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       use_ajax: true
-      css_class: 'panel panel-default panel-body'
+      css_class: 'panel panel-default'
     cache_metadata:
       max-age: 0
       contexts:
@@ -727,9 +738,9 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
+            alter_text: true
             text: ''
-            make_link: false
+            make_link: true
             path: ''
             absolute: false
             external: false
@@ -738,7 +749,7 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: ''
+            link_class: 'btn btn-primary btn-xs'
             prefix: ''
             suffix: ''
             target: ''
@@ -760,7 +771,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -882,6 +893,8 @@ display:
         filters: false
         filter_groups: false
         title: false
+        header: false
+        empty: false
       fields:
         field_name:
           id: field_name
@@ -1095,7 +1108,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
+            make_link: true
             path: ''
             absolute: false
             external: false
@@ -1104,7 +1117,7 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: ''
+            link_class: 'btn btn-primary btn-xs'
             prefix: ''
             suffix: ''
             target: ''
@@ -1220,6 +1233,19 @@ display:
           1: AND
       block_hide_empty: true
       title: 'Customer grades (unapproved)'
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content: '<h4 class="block-title">[view:title]</h4>'
+          plugin_id: text_custom
+      empty: {  }
     cache_metadata:
       max-age: 0
       contexts:

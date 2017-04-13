@@ -29,24 +29,43 @@ dependencies:
     - user
 third_party_settings:
   field_group:
-    group_contact:
+    group_basic:
       children:
-        - field_phone
-        - field_email
-        - field_website
-        - field_location
+        - group_contact
+        - group_details
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: html_element
       format_settings:
-        id: contact
-        classes: group
+        label: Basic
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'groups groups-basic'
+      label: Basic
+    group_contact:
+      children:
+        - field_phone
+        - field_email
+        - field_website
+        - field_location
+      parent_name: group_basic
+      weight: 1
+      format_type: html_element
+      format_settings:
+        label: Contact
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'group group-contact'
       label: Contact
     group_details:
       children:
@@ -54,105 +73,108 @@ third_party_settings:
         - field_insurance
         - field_credentials
         - field_payment
-      parent_name: ''
-      weight: 1
-      format_type: html_element
-      format_settings:
-        id: details
-        classes: group
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: Details
-    group_basic:
-      children:
-        - field_photo
-      parent_name: ''
+      parent_name: group_basic
       weight: 2
       format_type: html_element
       format_settings:
-        id: basic
-        classes: group
+        label: Details
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
-      label: Basic
+        id: ''
+        classes: 'group group-detail'
+      label: Details
+    group_photos:
+      children:
+        - field_photo
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: Photos
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'groups groups-photos'
+      label: Photos
 id: node.company.mini
 targetEntityType: node
 bundle: company
 mode: mini
 content:
   field_credentials:
-    weight: 6
+    type: list_default
+    weight: 8
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
     region: content
   field_dot_number:
-    weight: 3
+    type: number_integer
+    weight: 5
     label: inline
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
     region: content
   field_email:
-    weight: 6
+    type: basic_string
+    weight: 8
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: email_mailto
     region: content
   field_insurance:
-    weight: 5
+    type: number_integer
+    weight: 7
     label: inline
     settings:
       thousand_separator: ','
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
     region: content
   field_location:
-    weight: 8
+    type: address_plain
+    weight: 10
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: address_plain
     region: content
   field_payment:
-    weight: 7
+    type: list_default
+    weight: 9
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
     region: content
   field_phone:
-    weight: 5
+    type: string
+    weight: 7
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
     region: content
   field_photo:
-    weight: 3
+    type: image
+    weight: 2
     label: hidden
     settings:
       image_style: medium
       image_link: ''
     third_party_settings: {  }
-    type: image
     region: content
   field_website:
-    weight: 7
+    type: link
+    weight: 9
     label: inline
     settings:
       trim_length: 80
@@ -161,7 +183,6 @@ content:
       url_only: false
       url_plain: false
     third_party_settings: {  }
-    type: link
     region: content
 hidden:
   body: true
