@@ -6,45 +6,58 @@ dependencies:
     - field.field.grade.grade.field_company
     - field.field.grade.grade.field_grade
     - field.field.grade.grade.field_name
+    - field.field.grade.grade.field_review
+    - field.field.grade.grade.field_trip_date
   module:
+    - datetime
     - double_field
     - limograde_grade
     - options
+    - text
 id: grade.grade.default
 targetEntityType: grade
 bundle: grade
 mode: default
 content:
-  field_company:
-    weight: 1
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_grade:
-    weight: 0
+    weight: 1
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_name:
-    weight: 2
-    label: above
+    weight: 0
+    label: inline
     settings:
       inline: true
       first:
-        hidden: false
         prefix: ''
         suffix: ''
-      second:
         hidden: false
+      second:
+        hidden: true
         prefix: ''
         suffix: ''
     third_party_settings: {  }
     type: double_field_unformatted_list
     region: content
+  field_review:
+    weight: 3
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_trip_date:
+    weight: 2
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
 hidden:
+  field_company: true
   user_id: true

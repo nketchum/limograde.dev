@@ -11,7 +11,7 @@ _core:
 id: limograde_local_tasks
 theme: limograde
 region: content
-weight: -2
+weight: -6
 provider: null
 plugin: local_tasks_block
 settings:

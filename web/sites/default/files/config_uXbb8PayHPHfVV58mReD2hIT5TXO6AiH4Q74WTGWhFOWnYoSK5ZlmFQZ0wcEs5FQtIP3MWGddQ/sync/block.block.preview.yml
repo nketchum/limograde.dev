@@ -1,14 +1,19 @@
-uuid: e1a8ee2d-0271-4199-9e88-7240da6d747e
+uuid: 39a871d0-bf40-4caa-a9d6-25a4a86d9b1f
 langcode: en
 status: true
 dependencies:
   module:
+    - block_class
     - limograde_quote
+    - system
   theme:
     - limograde
+third_party_settings:
+  block_class:
+    classes: 'panel panel-default'
 id: preview
 theme: limograde
-region: footer
+region: sidebar_second
 weight: -6
 provider: null
 plugin: preview
@@ -17,4 +22,9 @@ settings:
   label: Preview
   provider: limograde_quote
   label_display: '0'
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/quote/request\r\n/node/add/*\r\n/node/*/edit\r\n/vehicle/*/add\r\n/vehicle/*/edit\r\n/grade/*/add\r\n/grade/*/edit\r\n/quote/*/add\r\n/quote/*/edit"
+    negate: true
+    context_mapping: {  }

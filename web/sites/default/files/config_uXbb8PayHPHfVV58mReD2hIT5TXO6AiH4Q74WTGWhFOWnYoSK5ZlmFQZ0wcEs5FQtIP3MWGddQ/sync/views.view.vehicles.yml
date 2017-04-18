@@ -72,65 +72,89 @@ display:
           summary: ''
           description: ''
           columns:
-            field_qty: field_qty
+            nid: nid
+            id: id
             field_vehicle_type_1: field_vehicle_type_1
+            field_qty: field_qty
             field_seats: field_seats
             field_day: field_day
             field_hour: field_hour
             field_mile: field_mile
             field_year: field_year
             field_amenities: field_amenities
+            edit_vehicle: edit_vehicle
           info:
-            field_qty:
+            nid:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
+              responsive: ''
+            id:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
               responsive: ''
             field_vehicle_type_1:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
+              responsive: ''
+            field_qty:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
               responsive: ''
             field_seats:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             field_day:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             field_hour:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             field_mile:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             field_year:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             field_amenities:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_vehicle:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: true
@@ -785,10 +809,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        edit_vehicle:
-          id: edit_vehicle
+        operations:
+          id: operations
           table: vehicle
-          field: edit_vehicle
+          field: operations
           relationship: none
           group_type: group
           admin_label: ''
@@ -797,7 +821,7 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: ''
             absolute: false
             external: false
@@ -806,7 +830,7 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: 'btn btn-primary btn-xs'
+            link_class: ''
             prefix: ''
             suffix: ''
             target: ''
@@ -833,9 +857,9 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Edit
+          destination: true
           entity_type: vehicle
-          plugin_id: entity_link_edit
+          plugin_id: entity_operations
       filters:
         field_vehicle_type_value:
           id: field_vehicle_type_value

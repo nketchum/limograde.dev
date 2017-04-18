@@ -6,33 +6,52 @@ dependencies:
     - field.field.grade.grade.field_company
     - field.field.grade.grade.field_grade
     - field.field.grade.grade.field_name
+    - field.field.grade.grade.field_review
+    - field.field.grade.grade.field_trip_date
   module:
+    - datetime
     - double_field
     - field_group
     - limograde_grade
+    - text
 third_party_settings:
   field_group:
     group_basic:
       children:
         - field_name
-        - field_grade
+        - field_trip_date
         - field_company
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        label: 'General Information'
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'General Information'
+    group_grade:
+      children:
+        - field_grade
+        - field_review
       parent_name: ''
       weight: 1
       format_type: fieldset
       format_settings:
-        id: ''
-        classes: ''
+        label: 'Grade & Review'
         description: ''
         required_fields: true
-      label: Basic
+        id: ''
+        classes: ''
+      label: 'Grade & Review'
 id: grade.grade.default
 targetEntityType: grade
 bundle: grade
 mode: default
 content:
   field_company:
-    weight: 2
+    weight: 5
     settings:
       match_operator: CONTAINS
       size: 60
@@ -41,13 +60,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_grade:
-    weight: 1
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_name:
-    weight: 0
+    weight: 3
     settings:
       inline: true
       first:
@@ -70,6 +89,20 @@ content:
         suffix: ''
     third_party_settings: {  }
     type: double_field
+    region: content
+  field_review:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_trip_date:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
     region: content
 hidden:
   user_id: true

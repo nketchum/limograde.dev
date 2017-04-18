@@ -12,7 +12,7 @@ dependencies:
 id: exposedformcompaniespage_1
 theme: limograde
 region: search
-weight: -3
+weight: -5
 provider: null
 plugin: 'views_exposed_filter_block:companies-page_1'
 settings:

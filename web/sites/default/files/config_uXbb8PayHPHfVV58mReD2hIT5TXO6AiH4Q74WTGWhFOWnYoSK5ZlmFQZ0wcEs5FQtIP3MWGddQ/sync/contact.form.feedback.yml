@@ -5,7 +5,7 @@ dependencies: {  }
 id: feedback
 label: Feedback
 recipients:
-  - support@limograde.com
+  - nketchum@gmail.com
 reply: ''
 weight: 0
 message: 'Your feedback has been sent. Thank you!'

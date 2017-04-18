@@ -29,7 +29,6 @@ dependencies:
     - path
     - telephone
     - text
-    - viewfield
 third_party_settings:
   field_group:
     group_contact:
@@ -93,9 +92,9 @@ content:
   created:
     type: datetime_timestamp
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_average_grade:
     weight: 3
     settings:
@@ -180,12 +179,6 @@ content:
     third_party_settings: {  }
     type: inline_entity_form_complex
     region: content
-  field_view_vehicles:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: viewfield_select
-    region: content
   field_website:
     weight: 8
     settings:
@@ -197,9 +190,9 @@ content:
   path:
     type: path
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 1
@@ -211,12 +204,13 @@ content:
   uid:
     type: entity_reference_autocomplete
     weight: 6
+    region: content
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
 hidden:
+  field_view_vehicles: true
   promote: true
   sticky: true

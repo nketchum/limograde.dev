@@ -10,8 +10,8 @@ _core:
   default_config_hash: PffmQ-ABSz5tFjWmVsR7NesunDnEivvopnJnBjl8KNE
 id: limograde_local_actions
 theme: limograde
-region: content
-weight: -3
+region: search
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

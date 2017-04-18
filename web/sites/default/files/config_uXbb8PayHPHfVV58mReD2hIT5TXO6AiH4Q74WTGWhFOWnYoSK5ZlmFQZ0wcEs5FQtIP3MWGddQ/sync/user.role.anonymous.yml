@@ -12,5 +12,6 @@ permissions:
   - 'access content'
   - 'access site-wide contact form'
   - 'add grade entities'
+  - 'add quote entities'
   - 'view published grade entities'
   - 'view published vehicle entities'

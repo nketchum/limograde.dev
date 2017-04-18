@@ -5,11 +5,15 @@ dependencies:
   config:
     - field.storage.grade.field_grade
     - field.storage.grade.field_name
+    - field.storage.grade.field_review
+    - field.storage.grade.field_trip_date
   module:
+    - datetime
     - double_field
     - limograde_grade
     - node
     - options
+    - text
     - user
 id: grades
 label: Grades
@@ -30,8 +34,12 @@ display:
         type: none
         options: {  }
       cache:
-        type: tag
-        options: {  }
+        type: time
+        options:
+          results_lifespan: 3600
+          results_lifespan_custom: 0
+          output_lifespan: 3600
+          output_lifespan_custom: 0
       query:
         type: views_query
         options:
@@ -72,7 +80,7 @@ display:
         type: table
         options:
           grouping: {  }
-          row_class: '{{ status__value }}'
+          row_class: ''
           default_row_class: true
           override: true
           sticky: false
@@ -80,14 +88,14 @@ display:
           summary: ''
           description: ''
           columns:
-            field_name: field_name
-            field_grade: field_grade
             created: created
-            edit_grade: edit_grade
+            field_grade: field_grade
+            field_name: field_name
+            operations: operations
           info:
-            field_name:
+            created:
               sortable: false
-              default_sort_order: asc
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -99,25 +107,152 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            created:
-              sortable: false
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_grade:
+            field_name:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
+            operations:
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
           default: created
           empty_table: false
       row:
         type: fields
       fields:
+        created:
+          id: created
+          table: grade
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Posted
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: grade
+          entity_field: created
+          plugin_id: field
+        field_grade:
+          id: field_grade
+          table: grade__field_grade
+          field: field_grade
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Grade
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_name:
           id: field_name
           table: grade__field_name
@@ -188,135 +323,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          plugin_id: field
-        field_grade:
-          id: field_grade
-          table: grade__field_grade
-          field: field_grade
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Grade
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        created:
-          id: created
-          table: grade
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Posted
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: grade
-          entity_field: created
           plugin_id: field
         edit_grade:
           id: edit_grade
@@ -410,10 +416,10 @@ display:
             group_items: {  }
           plugin_id: numeric
       sorts:
-        created:
-          id: created
-          table: grade
-          field: created
+        field_trip_date_value:
+          id: field_trip_date_value
+          table: grade__field_trip_date
+          field: field_trip_date_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -422,9 +428,7 @@ display:
           expose:
             label: ''
           granularity: second
-          entity_type: grade
-          entity_field: created
-          plugin_id: date
+          plugin_id: datetime
       title: 'Customer grades'
       header:
         area_text_custom:
@@ -436,21 +440,10 @@ display:
           admin_label: ''
           empty: true
           tokenize: true
-          content: "<div class=\"grade\"><a href=\"/grade/add?company={{ arguments.field_company_target_id }}&destination=/node/{{ arguments.field_company_target_id }}\" class=\"btn btn-xs btn-info\">Add your grade</a></div>\n<h4 class=\"block-title\">[view:title]</h4>"
+          content: "<div class=\"grade\"><a href=\"/grade/add?company={{ arguments.field_company_target_id }}&destination=/node/{{ arguments.field_company_target_id }}\" class=\"btn btn-sm btn-info\">Add your grade</a></div>\n<h4 class=\"block-title\">[view:title]</h4>"
           plugin_id: text_custom
       footer: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          empty: true
-          tokenize: false
-          content: '<p><strong>No one has graded this company yet.</strong></p>'
-          plugin_id: text_custom
+      empty: {  }
       relationships:
         field_company:
           id: field_company
@@ -527,7 +520,139 @@ display:
         filters: false
         filter_groups: false
         header: true
+        style: false
+        row: false
+        empty: false
       fields:
+        created:
+          id: created
+          table: grade
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Posted
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: short
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: grade
+          entity_field: created
+          plugin_id: field
+        field_grade:
+          id: field_grade
+          table: grade__field_grade
+          field: field_grade
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Grade
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         field_name:
           id: field_name
           table: grade__field_name
@@ -599,148 +724,19 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_grade:
-          id: field_grade
-          table: grade__field_grade
-          field: field_grade
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Grade
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        created:
-          id: created
+        operations:
+          id: operations
           table: grade
-          field: created
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Posted
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: timestamp
-          settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: grade
-          entity_field: created
-          plugin_id: field
-        edit_grade:
-          id: edit_grade
-          table: grade
-          field: edit_grade
+          field: operations
           relationship: none
           group_type: group
           admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: true
+            alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: ''
             absolute: false
             external: false
@@ -749,7 +745,7 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: 'btn btn-primary btn-xs'
+            link_class: ''
             prefix: ''
             suffix: ''
             target: ''
@@ -771,14 +767,14 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Edit
+          destination: true
           entity_type: grade
-          plugin_id: entity_link_edit
+          plugin_id: entity_operations
       allow:
         items_per_page: false
       filters:
@@ -864,8 +860,31 @@ display:
         groups:
           1: AND
       block_hide_empty: true
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:grade'
+        options:
+          relationship: none
+          view_mode: default
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: '<div class="panel-body"><p><strong>No grades have been submitted.</strong></p></div>'
+          plugin_id: text_custom
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -895,7 +914,77 @@ display:
         title: false
         header: false
         empty: false
+        css_class: false
+        cache: false
+        sorts: false
       fields:
+        created:
+          id: created
+          table: grade
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Posted
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: timestamp
+          settings:
+            date_format: medium
+            custom_date_format: ''
+            timezone: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: grade
+          entity_field: created
+          plugin_id: field
         field_name:
           id: field_name
           table: grade__field_name
@@ -903,7 +992,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'First name'
+          label: Name
           exclude: false
           alter:
             alter_text: false
@@ -947,13 +1036,13 @@ display:
           click_sort_column: first
           type: double_field_unformatted_list
           settings:
-            inline: false
+            inline: true
             first:
               hidden: false
               prefix: ''
               suffix: ''
             second:
-              hidden: true
+              hidden: false
               prefix: ''
               suffix: ''
           group_column: ''
@@ -1029,14 +1118,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        created:
-          id: created
-          table: grade
-          field: created
+        field_trip_date:
+          id: field_trip_date
+          table: grade__field_trip_date
+          field: field_trip_date
           relationship: none
           group_type: group
           admin_label: ''
-          label: Posted
+          label: 'Trip date'
           exclude: false
           alter:
             alter_text: false
@@ -1078,11 +1167,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_default
           settings:
-            date_format: short
-            custom_date_format: ''
-            timezone: ''
+            timezone_override: ''
+            format_type: short
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1093,22 +1181,20 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: grade
-          entity_field: created
           plugin_id: field
-        edit_grade:
-          id: edit_grade
-          table: grade
-          field: edit_grade
+        field_review:
+          id: field_review
+          table: grade__field_review
+          field: field_review
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Review
           exclude: false
           alter:
             alter_text: false
             text: ''
-            make_link: true
+            make_link: false
             path: ''
             absolute: false
             external: false
@@ -1117,7 +1203,69 @@ display:
             trim_whitespace: false
             alt: ''
             rel: ''
-            link_class: 'btn btn-primary btn-xs'
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 100
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: true
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        operations:
+          id: operations
+          table: grade
+          field: operations
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
             prefix: ''
             suffix: ''
             target: ''
@@ -1139,14 +1287,14 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: Edit
+          destination: true
           entity_type: grade
-          plugin_id: entity_link_edit
+          plugin_id: entity_operations
       allow:
         items_per_page: false
       filters:
@@ -1246,6 +1394,26 @@ display:
           content: '<h4 class="block-title">[view:title]</h4>'
           plugin_id: text_custom
       empty: {  }
+      css_class: 'panel panel-warning'
+      cache:
+        type: none
+        options: {  }
+      sorts:
+        created:
+          id: created
+          table: grade
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          entity_type: grade
+          entity_field: created
+          plugin_id: date
     cache_metadata:
       max-age: 0
       contexts:
@@ -1257,3 +1425,5 @@ display:
       tags:
         - 'config:field.storage.grade.field_grade'
         - 'config:field.storage.grade.field_name'
+        - 'config:field.storage.grade.field_review'
+        - 'config:field.storage.grade.field_trip_date'

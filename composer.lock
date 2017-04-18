@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "77bb30b882e99fd14003ad4a816c8704",
-    "content-hash": "38c3c719bcca180088a051850fbfb73c",
+    "hash": "19f493b48019a94100c71e0e740cb73f",
+    "content-hash": "4e8417d41151df485c18aa99674921bf",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1379,6 +1379,85 @@
             }
         },
         {
+            "name": "drupal/block_class",
+            "version": "1.0.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/block_class",
+                "reference": "8.x-1.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/block_class-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": "194cd52210ea2e0e5dbbd34fad4528d500424430"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-alpha1",
+                    "datestamp": "1475623439"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Stanush",
+                    "homepage": "https://www.drupal.org/user/89718"
+                },
+                {
+                    "name": "DYdave",
+                    "homepage": "https://www.drupal.org/user/467284"
+                },
+                {
+                    "name": "Four Kitchens",
+                    "homepage": "https://www.drupal.org/user/358502"
+                },
+                {
+                    "name": "Todd Nienkerk",
+                    "homepage": "https://www.drupal.org/user/92096"
+                },
+                {
+                    "name": "berenddeboer",
+                    "homepage": "https://www.drupal.org/user/143552"
+                },
+                {
+                    "name": "elliotttf",
+                    "homepage": "https://www.drupal.org/user/61601"
+                },
+                {
+                    "name": "mirzu",
+                    "homepage": "https://www.drupal.org/user/7710"
+                },
+                {
+                    "name": "patrickcoffeyo",
+                    "homepage": "https://www.drupal.org/user/2837945"
+                },
+                {
+                    "name": "pcoffey",
+                    "homepage": "https://www.drupal.org/user/1595818"
+                },
+                {
+                    "name": "tsmith512",
+                    "homepage": "https://www.drupal.org/user/2031446"
+                }
+            ],
+            "description": "Allows assigning classes to Blocks",
+            "homepage": "https://www.drupal.org/project/block_class",
+            "support": {
+                "source": "http://cgit.drupalcode.org/block_class"
+            }
+        },
+        {
             "name": "drupal/bootstrap",
             "version": "3.3.0",
             "source": {
@@ -1389,7 +1468,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/bootstrap-8.x-3.3.zip",
-                "reference": null,
+                "reference": "8.x-3.3",
                 "shasum": "008a0c795bc4ad20987fa34a456524740030d77b"
             },
             "require": {
@@ -2260,7 +2339,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/double_field-8.x-3.0.zip",
-                "reference": null,
+                "reference": "8.x-3.0",
                 "shasum": "82a4af9221cb8aa79bbb344a861340184bb51465"
             },
             "require": {
@@ -2474,6 +2553,88 @@
             "homepage": "https://www.drupal.org/project/inline_entity_form",
             "support": {
                 "source": "http://cgit.drupalcode.org/inline_entity_form"
+            }
+        },
+        {
+            "name": "drupal/mollom",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/mollom",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/mollom-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "57e138baeaa7d2f1931be684be85d560ff37a790"
+            },
+            "require": {
+                "drupal/core": "~8.0",
+                "mollom/client": "dev-psr4",
+                "php": ">=5.3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1483560543"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://drupal.org/project/mollom"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "Dries",
+                    "homepage": "https://www.drupal.org/user/1"
+                },
+                {
+                    "name": "Nick_vh",
+                    "homepage": "https://www.drupal.org/user/122682"
+                },
+                {
+                    "name": "Wim Leers",
+                    "homepage": "https://www.drupal.org/user/99777"
+                },
+                {
+                    "name": "blackskad",
+                    "homepage": "https://www.drupal.org/user/878346"
+                },
+                {
+                    "name": "cbarton281",
+                    "homepage": "https://www.drupal.org/user/3061395"
+                },
+                {
+                    "name": "eshta",
+                    "homepage": "https://www.drupal.org/user/1951462"
+                },
+                {
+                    "name": "sun",
+                    "homepage": "https://www.drupal.org/user/54136"
+                }
+            ],
+            "description": "Mollom drupal module",
+            "homepage": "https://drupal.org/project/mollom",
+            "keywords": [
+                "acquia",
+                "mollom",
+                "spam"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/mollom"
             }
         },
         {
@@ -3356,6 +3517,50 @@
                 "xml"
             ],
             "time": "2016-09-22 11:01:11"
+        },
+        {
+            "name": "mollom/client",
+            "version": "dev-psr4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Mollom/MollomPHP.git",
+                "reference": "bfb97d639d8b0a757c47742af5cfc59dd8363e44"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Mollom/MollomPHP/zipball/bfb97d639d8b0a757c47742af5cfc59dd8363e44",
+                "reference": "bfb97d639d8b0a757c47742af5cfc59dd8363e44",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Mollom\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "See contributors",
+                    "homepage": "https://github.com/mollom/MollomPHP/graphs/contributors"
+                }
+            ],
+            "description": "Generic PHP library for Mollom's REST API.",
+            "keywords": [
+                "acquia",
+                "mollom",
+                "spam"
+            ],
+            "time": "2015-12-03 21:18:35"
         },
         {
             "name": "nikic/php-parser",
@@ -7114,7 +7319,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "drupal/block_class": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
