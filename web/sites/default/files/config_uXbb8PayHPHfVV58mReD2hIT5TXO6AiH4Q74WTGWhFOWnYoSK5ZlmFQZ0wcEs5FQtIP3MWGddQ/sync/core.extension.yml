@@ -33,6 +33,7 @@ module:
   limograde_vehicle: 0
   link: 0
   menu_link_content: 0
+  menu_trail_by_path: 0
   menu_ui: 0
   mollom: 0
   node: 0
@@ -40,6 +41,8 @@ module:
   page_cache: 0
   path: 0
   range: 0
+  rest: 0
+  serialization: 0
   system: 0
   taxonomy: 0
   telephone: 0

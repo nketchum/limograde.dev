@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.company
+    - system.menu.main
   module:
     - limograde_vehicle
     - node
@@ -486,7 +487,7 @@ display:
             description: ''
             use_operator: false
             operator: field_location_locality_op
-            identifier: City
+            identifier: city
             required: false
             remember: false
             multiple: false
@@ -557,6 +558,15 @@ display:
           tokenize: false
           content: '<h4>No results to display.</h4>'
           plugin_id: text_custom
+      menu:
+        type: normal
+        title: Search
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -49
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

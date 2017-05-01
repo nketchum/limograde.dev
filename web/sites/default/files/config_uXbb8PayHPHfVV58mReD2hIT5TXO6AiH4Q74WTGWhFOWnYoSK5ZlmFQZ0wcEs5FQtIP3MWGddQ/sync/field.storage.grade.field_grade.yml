@@ -25,7 +25,7 @@ settings:
       label: 'D - Poor'
     -
       value: 0
-      label: 'E - Terrible'
+      label: 'F - Terrible'
   allowed_values_function: ''
 module: options
 locked: false
