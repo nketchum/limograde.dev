@@ -194,7 +194,7 @@ display:
         style: false
         row: false
       block_hide_empty: true
-      title: 'Recent blog'
+      title: 'Recent Blog'
       header:
         area_text_custom:
           id: area_text_custom
@@ -205,7 +205,7 @@ display:
           admin_label: ''
           empty: false
           tokenize: false
-          content: '<h5 class="panel-heading">[view:title]</h5>'
+          content: '<h5>[view:title]</h5>'
           plugin_id: text_custom
       allow:
         items_per_page: false
@@ -217,6 +217,8 @@ display:
         options:
           relationship: none
           view_mode: mini
+      block_description: 'Recent blog'
+      block_category: LimoGrade
     cache_metadata:
       max-age: -1
       contexts:

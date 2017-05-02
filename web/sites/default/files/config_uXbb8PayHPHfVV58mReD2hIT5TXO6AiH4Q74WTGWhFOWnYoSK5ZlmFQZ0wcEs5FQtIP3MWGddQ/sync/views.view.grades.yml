@@ -440,7 +440,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: true
-          content: "<div class=\"grade\"><a href=\"/grade/add?company={{ arguments.field_company_target_id }}&destination=/node/{{ arguments.field_company_target_id }}\" class=\"btn btn-sm btn-info\">Add your grade</a></div>\n<h4 class=\"block-title\">[view:title]</h4>"
+          content: "<div class=\"grade\"><a href=\"/grade/add?company={{ arguments.field_company_target_id }}&destination=/node/{{ arguments.field_company_target_id }}\" class=\"btn btn-xs btn-info\">Add your grade</a></div>\n<h4 class=\"block-title\">[view:title]</h4>"
           plugin_id: text_custom
       footer: {  }
       empty: {  }
@@ -883,6 +883,7 @@ display:
           tokenize: false
           content: '<div class="panel-body"><p><strong>No grades have been submitted.</strong></p></div>'
           plugin_id: text_custom
+      block_category: LimoGrade
     cache_metadata:
       max-age: -1
       contexts:
@@ -1414,6 +1415,7 @@ display:
           entity_type: grade
           entity_field: created
           plugin_id: date
+      block_category: LimoGrade
     cache_metadata:
       max-age: 0
       contexts:

@@ -23,6 +23,7 @@ module:
   field_ui: 0
   file: 0
   filter: 0
+  flag: 0
   image: 0
   inline_entity_form: 0
   limograde_company: 0

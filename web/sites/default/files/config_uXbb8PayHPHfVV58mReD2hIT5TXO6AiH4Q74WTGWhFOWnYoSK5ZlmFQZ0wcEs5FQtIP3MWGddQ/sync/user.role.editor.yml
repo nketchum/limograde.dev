@@ -4,13 +4,12 @@ status: true
 dependencies: {  }
 id: editor
 label: Editor
-weight: 3
+weight: -6
 is_admin: null
 permissions:
   - 'access user profiles'
   - 'add vehicle entities'
   - 'always view any average grade'
-  - 'bypass mollom protection'
   - 'change own username'
   - 'create article content'
   - 'create company content'

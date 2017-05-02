@@ -144,6 +144,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -181,7 +182,7 @@ display:
         filter_groups: false
         relationships: false
         exposed_form: true
-        use_ajax: false
+        use_ajax: true
         empty: false
       filters:
         field_vehicle_type_value:
@@ -545,7 +546,6 @@ display:
           required: false
           plugin_id: standard
       exposed_block: true
-      use_ajax: false
       empty:
         area_text_custom:
           id: area_text_custom
