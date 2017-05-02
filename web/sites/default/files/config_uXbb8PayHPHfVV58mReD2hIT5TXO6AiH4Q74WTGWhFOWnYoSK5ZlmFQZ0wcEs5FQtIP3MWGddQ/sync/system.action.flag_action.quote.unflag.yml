@@ -1,0 +1,13 @@
+uuid: 1688ee0c-4394-4fde-b2aa-d19091636cce
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.quote.unflag
+label: '-'
+type: vehicle
+plugin: 'flag_action:quote.unflag'
+configuration:
+  flag_id: quote
+  flag_action: unflag

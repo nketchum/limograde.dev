@@ -1,0 +1,35 @@
+uuid: 2d9aae7a-42d8-47a3-82e6-0b32058e8f65
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c21247fa-1bbb-4a7b-a47a-7b98160af2f4'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - limograde
+third_party_settings:
+  block_class:
+    classes: 'panel panel-default'
+id: join
+theme: limograde
+region: sidebar_second
+weight: -5
+provider: null
+plugin: 'block_content:c21247fa-1bbb-4a7b-a47a-7b98160af2f4'
+settings:
+  id: 'block_content:c21247fa-1bbb-4a7b-a47a-7b98160af2f4'
+  label: 'Member benefits'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/quote/request\r\n/node/add/*\r\n/node/*/edit\r\n/vehicle/*/add\r\n/vehicle/*/edit\r\n/grade/*/add\r\n/grade/*/edit\r\n/quote/*/add\r\n/quote/*/edit"
+    negate: true
+    context_mapping: {  }

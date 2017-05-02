@@ -1,0 +1,19 @@
+langcode: en
+id: quote
+uuid: a7fa554e-ef2d-4866-8d2b-543ac38339d0
+label: 'Quote form'
+mode: '1'
+enabled_fields:
+  - email
+  - message
+checks:
+  - spam
+strictness: normal
+unsure: captcha
+discard: '1'
+moderation: null
+mapping:
+  author_mail: email
+module: limograde_quote
+entity: null
+bundle: null

@@ -1,0 +1,34 @@
+uuid: 8f10ca53-5cb2-435c-88c4-af1c1fe2a058
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.vehicles
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - limograde
+third_party_settings:
+  block_class:
+    classes: 'panel panel-default'
+id: views_block__vehicles_block_1
+theme: limograde
+region: sidebar_second
+weight: -7
+provider: null
+plugin: 'views_block:vehicles-block_1'
+settings:
+  id: 'views_block:vehicles-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/quote/request\r\n/node/add/*\r\n/node/*/edit\r\n/vehicle/*/add\r\n/vehicle/*/edit\r\n/grade/*/add\r\n/grade/*/edit\r\n/quote/*/add\r\n/quote/*/edit"
+    negate: true
+    context_mapping: {  }

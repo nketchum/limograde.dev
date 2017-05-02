@@ -1,0 +1,13 @@
+uuid: 586c57b0-1228-4b49-8d86-e86a6f5c059f
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_quote
+id: quote.quote.default
+targetEntityType: quote
+bundle: quote
+mode: default
+content: {  }
+hidden:
+  user_id: true

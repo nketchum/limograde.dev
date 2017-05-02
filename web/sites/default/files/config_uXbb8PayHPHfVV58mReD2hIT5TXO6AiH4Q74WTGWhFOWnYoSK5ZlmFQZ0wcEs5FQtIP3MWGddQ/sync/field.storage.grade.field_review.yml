@@ -1,0 +1,19 @@
+uuid: 203aa647-4e41-416f-9f36-848e30cade10
+langcode: en
+status: true
+dependencies:
+  module:
+    - limograde_grade
+    - text
+id: grade.field_review
+field_name: field_review
+entity_type: grade
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+keys:
+  public: e0dea2989efa872e6045f7e9f6880e9e
+  private: 06167af290ca946a0fff1b49b4cfc21d
+fallback: 1
+languages_expected:
+  languageCode: en
+test_mode:
+  enabled: true
+  api_endpoint: dev.mollom.com
+  keys:
+    public: 1wegvkf01d5b515iebt9axjx961n07sy
+    private: 5bd97jrgh9pbnu5l2jo3sla715ch7ev8
+  invalid:
+    api_endpoint: fake-host
+privacy_link: false
+log_level: 4
+connection_timeout_seconds: 3
+api_endpoint: rest.mollom.com
+captcha:
+  audio:
+    enabled: false
+_core:
+  default_config_hash: 8uHhdqIc3ARJWLcZ_gKimtOymT0SRxGryuDcC6S5Vx4
