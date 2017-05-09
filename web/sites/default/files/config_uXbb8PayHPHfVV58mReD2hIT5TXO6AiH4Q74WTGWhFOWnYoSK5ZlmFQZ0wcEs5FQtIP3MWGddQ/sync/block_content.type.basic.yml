@@ -1,8 +1,0 @@
-uuid: 6a55f4ba-048b-417b-bb07-b3f5c83db842
-langcode: en
-status: true
-dependencies: {  }
-id: basic
-label: Basic
-revision: 0
-description: 'Standard formatted text.'

@@ -49,14 +49,40 @@
                     "type": "zip"
                  }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "leaflet/leaflet",
+                "version": "1.0.3",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/Leaflet/Leaflet/archive/v1.0.3.zip",
+                    "type": "zip"
+                 }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "dinbror/blazy",
+                "version": "1.8.2",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/dinbror/blazy/archive/1.8.2.zip",
+                    "type": "zip"
+                 }
+            }
         }
     ],
     "require": {
         "composer/installers": "~1.0",
         "cweagans/composer-patches": "~1.0",
+        "dinbror/blazy": "~1.8.2",
         "drupal-composer/drupal-scaffold": "~2.0",
         "drupal/address": "~1.0",
         "drupal/admin_toolbar": "~1.0",
+        "drupal/blazy": "~1.0",
         "drupal/block_class": "~1.0",
         "drupal/bootstrap": "~3.0",
         "drupal/chosen": "~2.0",
@@ -65,19 +91,27 @@
         "drupal/core": "~8.0",
         "drupal/devel": "~1.0",
         "drupal/double_field": "~3.0",
+        "drupal/email_registration": "~1.0",
         "drupal/entity": "~1.0",
         "drupal/field_group": "~1.0",
+        "drupal/fieldblock": "~2.0",
+        "drupal/flag": "4.x-dev#83daa5621df6899bc597c0e5c69dad86c1d83e88",
+        "drupal/geocoder": "~2.0",
+        "drupal/geofield": "~1.0",
+        "drupal/honeypot": "~1.0",
         "drupal/inline_entity_form": "~1.0",
+        "drupal/leaflet": "1.x-dev",
         "drupal/menu_trail_by_path": "~1.0",
-        "drupal/mollom": "~1.0",
         "drupal/pathauto": "~1.0",
         "drupal/range": "~1.0",
+        "drupal/recaptcha": "~2.0",
+        "drupal/rules": "~3.0",
         "drupal/viewfield": "~3.0",
         "drush/drush": "~8.0",
         "harvesthq/chosen": "~1.0",
         "jackmoore/colorbox": "master",
         "js-cookie/js-cookie": "~2.1.0",
-        "drupal/flag": "4.x-dev"
+        "leaflet/leaflet": "~1.0.3"
     },
     "require-dev": {
         "behat/mink": "~1.7",
@@ -126,6 +160,26 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/flag": {
+                "Add anonymous flagging functionality":
+                "https://raw.githubusercontent.com/nketchum/d8_contrib_patches/master/flag_relationship_action_anonymous_flagging.patch",
+                "Flag links redirect to /views/ajax when shown in an AJAX-enabled view":
+                "https://www.drupal.org/files/issues/flag-redirect_to_parent_path-2849217-4.patch"
+            },
+            "drupal/geofield": {
+                "Re-implement the Views proximity filter/field for Drupal 8":
+                "https://www.drupal.org/files/issues/re_implement_the_views-2654360-20.patch"
+            },
+            "drupal/fieldblock": {
+                "PHP exception when placing block":
+                "https://www.drupal.org/files/issues/2810783-19.patch"
+            },
+            "drupal/rules": {
+                "On install throws 'RulesUiDefinition contains 2 abstract methods' fatal error":
+                "https://raw.githubusercontent.com/nketchum/d8_contrib_patches/master/rulesuidefinition_contains_2_abstract_methods.patch"
+            }
         }
     }
 }
